@@ -17,7 +17,7 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://starlord.hackerearth.com/TopRamen')
+    fetch('//starlord.hackerearth.com/TopRamen')
       .then(data => data.json())
       .then(restroList => {
         this.setState({restroList});
@@ -83,7 +83,7 @@ class App extends React.Component {
             />
           </div>
         </header>
-        <section className="flex">
+        <section className="flex content-wrapper">
           <Sidebar
             restroList={this.state.restroList}
             filterList={this.filterList.bind(this)}
