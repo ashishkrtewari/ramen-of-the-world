@@ -83,9 +83,6 @@ container {
   position: sticky;
   width: 20vw;
 }
-.sidebar option {
-  padding: 1rem
-}
 .sidebar select {
   margin: 1rem 0;
 }

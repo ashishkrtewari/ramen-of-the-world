@@ -2,6 +2,7 @@ import React from 'react';
 import ListItem from "./components/listItem";
 import './App.css';
 import Sidebar from './components/sidebar';
+import data from './ramen-list'
 
 class App extends React.Component {
 
@@ -17,12 +18,10 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-    fetch('//starlord.hackerearth.com/TopRamen')
-      .then(data => data.json())
-      .then(restroList => {
-        this.setState({restroList});
-        this.setState({filteredList: restroList});
-      })
+    setTimeout(() => {
+      this.setState({restroList: data});
+        this.setState({filteredList: data});
+    }, 100)
   }
 
   filterList({text, yearFilter, starFilter, countryFilter}) {
